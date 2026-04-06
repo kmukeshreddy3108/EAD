@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+
+<h2>Login</h2>
+
+<form onsubmit="return validate()">
+    Username: <input type="text" id="user"><br><br>
+    Password: <input type="password" id="pass"><br><br>
+    <input type="submit" value="Login">
+</form>
+
+<script>
+function validate() {
+    var u = document.getElementById("user").value;
+    var p = document.getElementById("pass").value;
+
+    if (u == "" || p == "") {
+        alert("All fields required!");
+        return false;
+    }
+    return true;
+}
+</script>
+
+</body>
+</html>
